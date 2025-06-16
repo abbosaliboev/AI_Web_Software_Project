@@ -6,7 +6,7 @@ Welcome to the **Real-Time Safety Monitoring System**, a web-based application d
 
 ## 📸 System Demo
 
-> ⚠️ Insert your demo GIF or screenshot here  
+> ⚠️ demo GIF 
 ![System Demo](./assets/screenshots/demo.gif)
 
 ---
