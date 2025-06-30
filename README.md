@@ -25,7 +25,7 @@ This system helps automate and improve safety in high-risk environments such as 
 
 | Name           | Role              | Responsibilities                          |
 |----------------|-------------------|--------------------------------------------|
-| **Aliboev Abbos** | Team Leader, AI & Frontend | Project coordination, frontend logic and Development |
+| **Aliboev Abbos** | Team Leader, AI & Frontend | Project coordination, frontend logic and Development, YOLO |
 | **김태영**         | AI & Backend       | YOLO model training, backend integration    |
 | **전설민**         | Backend & DB       | FastAPI APIs, database design & logic       |
 
