@@ -1,151 +1,121 @@
+# 🛡️ Real-Time Safety Monitoring System
 
-🛡️ Real-Time Safety Monitoring System
+Welcome to the **Real-Time Safety Monitoring System**, a comprehensive web-based application designed to enhance workplace safety through **real-time monitoring** of **PPE (Personal Protective Equipment)** compliance using **AI-powered computer vision**.
 
-Welcome to the Real-Time Safety Monitoring System, a comprehensive web-based application built to enhance workplace safety through real-time detection and monitoring of PPE (Personal Protective Equipment) compliance using AI-powered computer vision.
+This system helps automate and improve safety in high-risk environments such as **construction sites, warehouses, and factories**, detecting if workers are missing critical safety gear (helmet, vest, glasses) via live camera streams and real-time alerts.
 
-Developed as part of our Web Software Capstone Project, the system combines modern web development practices, real-time camera integration, and AI (YOLOv8) to provide a smart and accessible safety solution for environments such as construction sites, factories, and warehouses.
+---
 
-⸻
+## 🎥 Demo Preview
 
-📽️ System Demo
-	•	Welcome Page
+> 📌 Add your GIFs below by replacing the image paths.
 
-	•	Login, Dashboard, Summary Page
+### 🏁 Welcome Page  
+![Welcome Demo](./Documents/SafetyAI_WelcomePage.gif)
 
-	•	Timeline & Report Page
+### 📊 Dashboard, Login, Summary  
+![Dashboard Demo](./Documents/SafetyAI_Dashboard_Summary.gif)
 
+### 🕒 Timeline, Report Page  
+![Timeline Demo](./Documents/SafetyAI_Timeline_Report.gif)
 
-⸻
+---
 
-👥 Team MEERKAT
+## 👨‍💻 Team MEERKAT
 
-Name	Role	Responsibilities
-Aliboev Abbos	Team Leader, AI & Frontend	Project coordination, frontend logic, AI integration
-김태영	AI & Backend	YOLO model training, backend connection
-전설민	Backend & DB	API implementation, MySQL DB design
+| Name           | Role              | Responsibilities                          |
+|----------------|-------------------|--------------------------------------------|
+| **Aliboev Abbos** | Team Leader, AI & Frontend | Project coordination, frontend logic, YOLO integration |
+| **김태영**         | AI & Backend       | YOLO model training, backend integration    |
+| **전설민**         | Backend & DB       | FastAPI APIs, database design & logic       |
 
+---
 
-⸻
+## 💡 Why This Project?
 
-💡 Motivation & Goals
+Safety is a top priority in industrial environments. Manual monitoring of PPE is inefficient and prone to errors. We wanted to build a system that:
 
-Modern companies demand smart safety systems to reduce risks and ensure compliance. PPE is crucial to protect workers, but manual monitoring is inefficient.
+- 📹 Monitors workers via live camera feeds
+- 🤖 Uses AI to detect missing PPE instantly
+- 🖥️ Visualizes incidents, trends, and reports in a responsive web dashboard
+- 🌐 Supports multiple languages and is easy to use
 
-We envisioned a real-time, web-based, AI-enhanced solution to:
-	•	Automate PPE compliance checks
-	•	Monitor multiple cameras simultaneously
-	•	Store and analyze safety data for insights and reporting
+---
 
-⸻
+## 🌟 Key Features
 
-🌐 Key Features
+- 🔐 **User Login**: Secure, role-based login system
+- 📺 **Real-Time Camera Feed**: Monitor up to 6 live cameras
+- 🚨 **AI-Powered Detection**: YOLOv8 detects helmet, vest, and glasses violations
+- 📈 **Summary Dashboard**: Weekly trend charts, safety score, alert heatmaps
+- 📅 **Timeline View**: Camera-wise alert history
+- 📁 **Report Page**: Alert logs, worker data, manual reporting
+- ⚙️ **Settings Page**: Theme toggle (Dark/Light), language switch
+- 🌗 **Dark & Light Modes**: User-selectable interface theme
+- 🌍 **Multi-Language Support**: English 🇺🇸 and Korean 🇰🇷 with `react-i18next`
+- 📤 **CSV Download**: Export alerts for safety audits
 
-Feature	Description
-🔐 User Authentication	Secure login with role-based access
-📸 Live Camera Monitoring	Real-time video stream (up to 6 feeds)
-🚨 AI-based PPE Detection	Detects absence of helmet, vest, or glasses using YOLO
-📊 Summary Dashboard	Safety scores, violation trends, rankings, heatmaps
-📆 Timeline View	Chronological incident logs per camera
-📁 Worker Reports	Searchable alert logs and manual report form
-🌍 Multi-language Support	English 🇺🇸 and Korean 🇰🇷 via react-i18next
-📤 CSV Export	Downloadable reports for audits and analysis
-🌓 Dark & Light Mode	Theming support for user preference
-📱 Responsive UI	Mobile-friendly layout via Bootstrap + media queries
+---
 
+## 🧠 AI Integration
 
-⸻
+- 🤖 Model: **YOLOv8n**  
+- 🖼️ Dataset:  
+  - **Phase 1**: 1,176 images  
+  - **Phase 2**: 2,551 images (focused on head detection)
 
-⚙️ Tools & Technologies
+- ⚙️ Inference Process:
+  ```plaintext
+  [Camera Feed] → [YOLO AI (Subprocess)] → [Annotated Frame + Label] → [FastAPI Backend] → [Frontend UI]
 
-Layer	Tools / Frameworks
-🎨 Design	Figma, Blue & White Minimalism
-🖥️ Frontend	React.js, SCSS, Bootstrap, Recharts, React Router, Axios, i18next
-🧠 AI	YOLOv8n, Python, Custom Dataset (3.7K+ images)
-🔧 Backend	FastAPI, Python Multiprocessing, REST API
-💾 Database	MySQL, SQLAlchemy ORM
-🔗 Others	GitHub, LocalStorage, Hooks (useState, useEffect, useMemo, etc.)
+## 🏗️ System Architecture
 
-
-⸻
-
-🧠 AI Integration: YOLOv8
-
-The AI module is trained using a custom dataset for PPE detection:
-	•	Phase 1: 1,176 images (initial model)
-	•	Phase 2: 2,551 images (improved head detection)
-	•	YOLOv8n was chosen for its speed and lightweight nature.
-
-🧪 Inference Pipeline:
-
-[Camera Stream] --> [YOLO AI (Sub Process)] --> [Annotated Frame + Label] --> [FastAPI Backend] --> [Frontend]
-
-⚙️ AI Logic:
-	•	Subprocess inference via PIPE
-	•	Data is parsed and sent to backend for logging and frontend visualization
-	•	Multi-label detection with bounding box overlays
-
-⸻
-
-🏗️ System Architecture
-
-Frontend (React.js)     <->    FastAPI Backend    <->    YOLO AI Detection
+Frontend (React.js)     <->    FastAPI Backend    <->    YOLOv8 AI Detection
      |                                 |                     |
   React Router                  SQLAlchemy ORM         Camera Stream + Alert Engine
      |                                 |
 LocalStorage, Axios             MySQL Database
 
-Each camera feed is analyzed in real time. Alerts are pushed to the backend and reflected instantly in the frontend.
+## 🖥️ Web Pages Overview
 
-⸻
+| Page            | Description                                                |
+|-----------------|------------------------------------------------------------|
+| Welcome Page    | Project intro and smooth entry animation                   |
+| Login Page      | Secure form-based authentication                          |
+| Dashboard       | 6-camera grid view, real-time overlay alerts               |
+| Camera Detail   | Individual camera feed, filterable alerts                  |
+| Summary         | Safety scores, trend graphs (Recharts)                     |
+| Timeline        | Chronological alerts per camera                            |
+| Report          | Searchable worker alert logs and manual report entry       |
+| Settings        | Theme, language, and future preferences                    |
+| Info            | System explanation and contact/support section             |
 
-📈 Website Overview
+## ⚙️ Technology Stack
+| Layer      | Stack & Tools                                           |
+|------------|---------------------------------------------------------|
+| 🎨 UI/UX     | Figma, Minimalist Blue-White design                    |
+| 📱 Frontend | React.js, SCSS, Bootstrap, Recharts, Axios, i18next    |
+| 🧠 AI        | YOLOv8n, Python Multiprocessing                        |
+| 🔧 Backend   | FastAPI (Python), RESTful API                          |
+| 🗃️ Database  | MySQL, SQLAlchemy ORM                                  |
 
-The system includes the following main pages:
+## 🧩 React Features & Hooks
+- `useState` — UI reactivity for alerts and toggles
+- `useEffect` — Poll backend every 10s for new alerts
+- `useMemo` — Sort/aggregate alerts efficiently
+- `useParams` — Route-based camera ID handling
+- `useOutletContext` — Share layout state between nested pages
 
-Page	Purpose
-Welcome	Intro animation and feature overview
-Login	Secure access with form validation
-Dashboard	Live camera feed and statistics
-Camera Detail	Individual stream view + alert filter
-Summary	Trend graphs (Recharts)
-Timeline	Camera-wise chronological log
-Report	Worker alert records + manual reporting
-Info	System introduction and FAQ
-Settings	Language switch, preferences (WIP)
+## 🛠️ Future Improvements
+- 🔍 Add fire/fall/smoke detection modules
+- 🔔 Alert notification via email/SMS
+- ☁️ Cloud deployment (AWS/GCP)
+- 🔐 Advanced admin dashboard
+- 📲 Mobile app version
 
+## 📁 Repository
+🔗 GitHub: [Web_Software_Project](https://github.com/abbosaliboev/Web_Software_Project.git)
 
-⸻
+Built with ❤ by **Team MEERKAT** for **Chungbuk National University’s Web Software course**.
 
-🔍 Hooks & Logic Highlights
-	•	useState — manage alerts, filters
-	•	useEffect — auto-fetch alerts every 10 seconds
-	•	useMemo — optimize sorting/counting of alerts
-	•	useParams — extract camera ID from route
-	•	useOutletContext — share layout data across nested components
-
-⸻
-
-🚀 Future Work
-	•	Add more detection classes (e.g., fire, fall, smoke)
-	•	Implement user analytics dashboard
-	•	Enhance admin controls (permission levels, alert zones)
-	•	Cloud deployment for global access
-	•	Notification system (email/SMS for severe alerts)
-
-⸻
-
-🔗 Repository
-
-📁 GitHub Repo: Web Software Project
-
-⸻
-
-📣 Final Notes
-
-This project reflects our team’s passion for real-world impact, combining AI + Web + UX to create a product that not only meets academic goals but also addresses genuine safety concerns in industrial settings.
-
-Built with ❤️ by Team MEERKAT.
-
-⸻
-
-Would you like this README in markdown (.md) file format or pasted into a Notion page or GitHub directly?
+For feedback or contributions, feel free to fork or reach out!
