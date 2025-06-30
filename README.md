@@ -1,6 +1,3 @@
-Here is a complete, polished, and professional README.md file for your Real-Time Safety Monitoring System project based on the information provided in your presentations and gifs:
-
-⸻
 
 🛡️ Real-Time Safety Monitoring System
 
