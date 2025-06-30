@@ -8,7 +8,7 @@ Welcome to the **Real-Time Safety Monitoring System**, a web-based application d
 
 ## 📸 System Demo
 
-Welcome Page
+**Welcome Page** <br>
 ![System Demo](./Documents/SafetyAI_WelcomePage.gif) <br>
 
 **Login, Dashboard, Summary Page** <br>
