@@ -1,5 +1,3 @@
-## In Process ...
-
 # 🛡️ Real-Time Safety Monitoring System
 
 Welcome to the **Real-Time Safety Monitoring System**, a web-based application designed to detect and monitor PPE (Personal Protective Equipment) compliance in real-time. The system leverages computer vision (YOLO model), a modern web frontend (React + SCSS), and a FastAPI backend to ensure on-site safety monitoring through live camera feeds, alert tracking, and incident reporting.
@@ -11,8 +9,11 @@ Welcome to the **Real-Time Safety Monitoring System**, a web-based application d
 **Welcome Page** <br>
 ![System Demo](./Documents/SafetyAI_WelcomePage.gif) <br>
 
-**Login, Dashboard, Summary Page** <br>
-![System Demo](./Documents/SafetyAI_Dashboard_Summary.gif)
+**Login, Dashboard, Summary Page** <br> 
+![System Demo](./Documents/SafetyAI_Dashboard_Summary.gif) <br> 
+
+**Timeline, Report Page** <br>
+![System Demo](./Documents/SafetyAI_Timeline_Report.gif) <br> 
 
 ---
 
