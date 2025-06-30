@@ -8,8 +8,8 @@ Welcome to the **Real-Time Safety Monitoring System**, a web-based application d
 
 ## 📸 System Demo
 
-> ⚠️ demo GIF 
 ![System Demo](./Documents/SafetyAI_WelcomePage.gif)
+![System Demo](./Documents/SafetyAI_Dashboard_Summary.gif)
 
 ---
 
